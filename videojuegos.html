@@ -2,6 +2,9 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/js/scripts.js"></script>
     <title>Videojuegos</title>
 </head>
 <body>
@@ -13,17 +16,21 @@
         <a href="noticias.html">Noticias</a>
         <a href="contacto.html">Contacto</a>
     </nav>
-    <div>
+    <main class="container">
         <h1>Videojuegos</h1>
         <h2>Los siguientes juegos han marcado una tendencia en la industria, demos un vistazo.</h2>
-        <article>
-            <h2>DOOM (2016)</h2>
-            <img src="assets/img/doom.jpg" alt="Portada del videojuego DOOM (2016)" style="height: 150px; width: 250px;">
-            <p><b>DOOM</b> es una reinvención del clásico shooter en primera persona, que combina velocidad, 
+        <details>
+            <summary>
+                <h2>DOOM (2016)</h2>
+                <img src="assets/img/doom.jpg" alt="Portada del videojuego DOOM (2016)" class="imagen-juego">
+                <button onclick="window.open('https://store.steampowered.com/app/379720/DOOM/', '_blank')">Ver en Steam</button>
+            </summary>
+            <div>
+                <p><b>DOOM</b> es una reinvención del clásico shooter en primera persona, que combina velocidad, 
                 violencia visceral y música metalera. El jugador encarna al Doom Slayer, un marine enfrentado a hordas de demonios desatados en Marte.</p>
-            <p>El juego es aclamado por su jugabilidad fluida, sistema de combate agresivo y diseño de niveles que premia 
+                <p>El juego es aclamado por su jugabilidad fluida, sistema de combate agresivo y diseño de niveles que premia 
                 la exploración. Un título perfecto para amantes de la acción intensa.</p>
-            <button onclick="window.open('https://store.steampowered.com/app/379720/DOOM/', '_blank')">Ver en Steam</button>
+            </div>
             <div>
                 <h4>Trailer de DOOM (2016):</h4>
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/RO90omga8D4?si=94zj_bwAy_DIbe95" 
@@ -44,15 +51,41 @@
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
                 </iframe>
             </div>
-        </article>
-        <article>
-            <h2>Firewatch</h2>
-            <img src="assets/img/firewatch.jpg" alt="Firewatch" style="height: 150px; width: 250px;">
-            <p><b>Firewatch</b> es una experiencia narrativa en primera persona ambientada en un bosque de Wyoming durante el verano de 1989. 
+            <section class="opinion-section">
+                <h2>Comparte tu opinión sobre este videojuego</h2>
+                <form class="form-opinion">
+                    <label for="nombre">Tu nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                    <label for="rating">Puntuación:</label>
+                    <select id="rating" name="rating">
+                        <option value="5">⭐️⭐️⭐️⭐️⭐️ - Excelente</option>
+                        <option value="4">⭐️⭐️⭐️⭐️ - Muy bueno</option>
+                        <option value="3">⭐️⭐️⭐️ - Regular</option>
+                        <option value="2">⭐️⭐️ - Malo</option>
+                        <option value="1">⭐️ - Muy malo</option>
+                    </select>
+                    <label for="comentario">Comentario:</label>
+                    <textarea id="comentario" name="comentario" rows="4" required></textarea>
+                    <button type="submit">Enviar opinión</button>
+                </form>
+            </section>
+            <div class="comentarios-container">
+                <h3>Opiniones de usuarios:</h3>
+                <ul class="lista-comentarios"></ul>
+            </div>
+        </details>
+        <details>
+            <summary>
+                <h2>Firewatch</h2>
+                <img src="assets/img/firewatch.jpg" alt="Firewatch" class="imagen-juego">
+                <button onclick="window.open('https://store.steampowered.com/app/383870/Firewatch/', '_blank')">Ver en Steam</button>
+            </summary>
+            <div>
+                <p><b>Firewatch</b> es una experiencia narrativa en primera persona ambientada en un bosque de Wyoming durante el verano de 1989. 
                 Juegas como Henry, un vigilante de incendios que descubre misterios inquietantes mientras se comunica por radio con su 
                 supervisora, Delilah.</p>
-            <p>Con una historia envolvente, arte estilizado y un fuerte enfoque en la interacción emocional, Firewatch destaca por su atmósfera introspectiva y conmovedora.</p>
-            <button onclick="window.open('https://store.steampowered.com/app/383870/Firewatch/', '_blank')">Ver en Steam</button>
+                <p>Con una historia envolvente, arte estilizado y un fuerte enfoque en la interacción emocional, Firewatch destaca por su atmósfera introspectiva y conmovedora.</p>
+            </div>
             <div>
                 <h4>Trailer de Firewatch:</h4>
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/d02lhvvVSy8?si=md7TBxHN5NJCLika" 
@@ -73,15 +106,41 @@
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
                 </iframe>
             </div>
-        </article>
-        <article>
-            <h2>Stardew Valley</h2>
-            <img src="assets/img/stardew-valley.jpg" alt="Stardew Valley" style="height: 150px; width: 250px;">
-            <p><b>Stardew Valley</b> es un simulador de vida y granja en el que heredas una vieja propiedad de tu abuelo. 
+            <section class="opinion-section">
+                <h2>Comparte tu opinión sobre este videojuego</h2>
+                <form class="form-opinion">
+                    <label for="nombre">Tu nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                    <label for="rating">Puntuación:</label>
+                    <select id="rating" name="rating">
+                        <option value="5">⭐️⭐️⭐️⭐️⭐️ - Excelente</option>
+                        <option value="4">⭐️⭐️⭐️⭐️ - Muy bueno</option>
+                        <option value="3">⭐️⭐️⭐️ - Regular</option>
+                        <option value="2">⭐️⭐️ - Malo</option>
+                        <option value="1">⭐️ - Muy malo</option>
+                    </select>
+                    <label for="comentario">Comentario:</label>
+                    <textarea id="comentario" name="comentario" rows="4" required></textarea>
+                    <button type="submit">Enviar opinión</button>
+                </form>
+            </section>
+            <div class="comentarios-container">
+                <h3>Opiniones de usuarios:</h3>
+                <ul class="lista-comentarios"></ul>
+            </div>
+        </details>
+        <details>
+            <summary>
+                <h2>Stardew Valley</h2>
+                <img src="assets/img/stardew-valley.jpg" alt="Stardew Valley" class="imagen-juego">
+                <button onclick="window.open('https://store.steampowered.com/app/413150/Stardew_Valley/', '_blank')">Ver en Steam</button>
+            </summary>
+            <div>
+                <p><b>Stardew Valley</b> es un simulador de vida y granja en el que heredas una vieja propiedad de tu abuelo. 
                 A partir de ahí, tendrás la libertad de cultivar, pescar, criar animales, explorar cuevas, relacionarte con los vecinos e incluso formar una familia.</p>
-            <p>Creado por una sola persona, el juego combina mecánicas relajantes con profundidad y libertad. Con gráficos pixel art encantadores y una banda sonora 
+                <p>Creado por una sola persona, el juego combina mecánicas relajantes con profundidad y libertad. Con gráficos pixel art encantadores y una banda sonora 
                 memorable, Stardew Valley es ideal para quienes buscan una experiencia tranquila pero adictiva.</p>
-            <button onclick="window.open('https://store.steampowered.com/app/413150/Stardew_Valley/', '_blank')">Ver en Steam</button>
+            </div>
             <div>
                 <h4>Trailer de Stardew Valley:</h4>
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/ot7uXNQskhs?si=6fy8QO20maIRDVRy" 
@@ -102,8 +161,30 @@
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
                 </iframe>
             </div>
-        </article>
-    </div>
+            <section class="opinion-section">
+                <h2>Comparte tu opinión sobre este videojuego</h2>
+                <form class="form-opinion">
+                    <label for="nombre">Tu nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                    <label for="rating">Puntuación:</label>
+                    <select id="rating" name="rating">
+                        <option value="5">⭐️⭐️⭐️⭐️⭐️ - Excelente</option>
+                        <option value="4">⭐️⭐️⭐️⭐️ - Muy bueno</option>
+                        <option value="3">⭐️⭐️⭐️ - Regular</option>
+                        <option value="2">⭐️⭐️ - Malo</option>
+                        <option value="1">⭐️ - Muy malo</option>
+                    </select>
+                    <label for="comentario">Comentario:</label>
+                    <textarea id="comentario" name="comentario" rows="4" required></textarea>
+                    <button type="submit">Enviar opinión</button>
+                </form>
+            </section>
+            <div class="comentarios-container">
+                <h3>Opiniones de usuarios:</h3>
+                <ul class="lista-comentarios"></ul>
+            </div>
+        </details>
+    </main>
     <footer>
         <img src="assets/Logo-UTPL.jpg" style="height: 100px; width: 100px;" alt="LogoUTPL">
         <p>Realizado por Cristopher Jaramillo</p>

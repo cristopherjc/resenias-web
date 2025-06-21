@@ -2,6 +2,9 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/js/scripts.js"></script>
     <title>Películas</title>
 </head>
 <body>
@@ -13,17 +16,21 @@
         <a href="noticias.html">Noticias</a>
         <a href="contacto.html">Contacto</a>
     </nav>
-    <div>
+    <main class="container">
         <h1>Películas</h1>
         <h2>Estas películas te encantarán.</h2>
-        <article>
-            <h3>Manchester by the sea.</h3>
-            <div>
+        <details>
+            <summary>
+                <h3>Manchester by the sea.</h3>
                 <div>
                     <img src="assets/img/manchester-by-the-sea.avif" alt="Manchester by the sea" style="height: 200px; width: 150px;">
                     <button onclick="window.open('https://www.justwatch.com/es/pelicula/manchester-by-the-sea', '_blank')">Ver en JustWatch</button>
                     <button onclick="window.open('https://www.youtube.com/watch?v=CPvXci8-szY', '_blank')">Ver Trailer</button>
                 </div>
+                <h6>Click para ver más...</h6>
+                <br>
+            </summary>
+            <div>
                 <h4>La película Manchester by the sea es un profundo relato que explora el estancamiento emocional provocado por el dolor, las culpas y los demonios internos.</h4>
                 <p><i>Director: Kenneth Lonergan</i></p>
                 <p><b>Sinopsis</b></p>
@@ -38,6 +45,7 @@
                     también destruyó su matrimonio con Randi (Michelle Williams). En medio de todo esto, Lee lucha por encontrar una vía 
                     para sanar, aunque sus propios errores y el dolor del pasado lo persiguen incansablemente.
                 </p>
+                <br>
                 <h4>Reseña de nuestros cinéfilos.</h4>
                 <div>
                     <img src="assets/usuario_comentarios.png" alt="Foto Reseñador" style="height: 50px; width: 50px;">
@@ -70,16 +78,42 @@
                         por recorrer. Si buscas una experiencia cinematográfica que te haga pensar y sentir en profundidad, esta película definitivamente merece ser vista.
                     </p>
                 </div>
+                <section class="opinion-section">
+                    <h2>Comparte tu opinión sobre esta película</h2>
+                    <form class="form-opinion">
+                        <label for="nombre">Tu nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                        <label for="rating">Puntuación:</label>
+                        <select id="rating" name="rating">
+                            <option value="5">⭐️⭐️⭐️⭐️⭐️ - Excelente</option>
+                            <option value="4">⭐️⭐️⭐️⭐️ - Muy bueno</option>
+                            <option value="3">⭐️⭐️⭐️ - Regular</option>
+                            <option value="2">⭐️⭐️ - Malo</option>
+                            <option value="1">⭐️ - Muy malo</option>
+                        </select>
+                        <label for="comentario">Comentario:</label>
+                        <textarea id="comentario" name="comentario" rows="4" required></textarea>
+                        <button type="submit">Enviar opinión</button>
+                    </form>
+                </section>
+                <div class="comentarios-container">
+                    <h3>Opiniones de usuarios:</h3>
+                    <ul class="lista-comentarios"></ul>
+                </div>
             </div>
-        </article>
-        <article>
-            <h3>Flow</h3>
-            <div>
+        </details>
+        <details>
+            <summary>
+                <h3>Flow</h3>
                 <div>
                     <img src="assets/img/flow-2024.avif" alt="Flow" style="height: 200px; width: 150px;">
                     <button onclick="window.open('https://www.justwatch.com/es/pelicula/flow-2024', '_blank')">Ver en JustWatch</button>
                     <button onclick="window.open('https://www.youtube.com/watch?v=izIuFUnZkjA', '_blank')">Ver Trailer</button>
                 </div>
+                <h6>Click para ver más...</h6>
+                <br>
+            </summary>
+            <div>
                 <h4>La película de animación independiente ganadora de dos Oscar</h4>
                 <p><i>Director: Gints Zilbalodis</i></p>
                 <p><b>Sinopsis</b></p>
@@ -88,6 +122,7 @@
                     desaparecido. Busca refugio en un barco con un grupo de animales. Pero llevarse bien con 
                     ellos resulta ser un reto aún mayor que superar su miedo al agua.
                 </p>
+                <br>
                 <h4>Reseña de nuestros cinéfilos.</h4>
                 <div>
                     <img src="assets/usuario_comentarios.png" alt="Foto Reseñador" style="height: 50px; width: 50px;">
@@ -108,16 +143,42 @@
                         finalista al Oscar 2025, consolidándose como una obra maestra del cine animado independiente por su sensibilidad y técnica.
                     </p>
                 </div>
+                <section class="opinion-section">
+                    <h2>Comparte tu opinión sobre esta película</h2>
+                    <form class="form-opinion">
+                        <label for="nombre">Tu nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                        <label for="rating">Puntuación:</label>
+                        <select id="rating" name="rating">
+                            <option value="5">⭐️⭐️⭐️⭐️⭐️ - Excelente</option>
+                            <option value="4">⭐️⭐️⭐️⭐️ - Muy bueno</option>
+                            <option value="3">⭐️⭐️⭐️ - Regular</option>
+                            <option value="2">⭐️⭐️ - Malo</option>
+                            <option value="1">⭐️ - Muy malo</option>
+                        </select>
+                        <label for="comentario">Comentario:</label>
+                        <textarea id="comentario" name="comentario" rows="4" required></textarea>
+                        <button type="submit">Enviar opinión</button>
+                    </form>
+                </section>
+                <div class="comentarios-container">
+                    <h3>Opiniones de usuarios:</h3>
+                    <ul class="lista-comentarios"></ul>
+                </div>
             </div>
-        </article>
-        <article>
-            <h3>La sustancia</h3>
-            <div>
+        </details>
+        <details>
+            <summary>
+                <h3>La sustancia</h3>
                 <div>
                     <img src="assets/img/la-sustancia-2024.avif" alt="La sustancia" style="height: 200px; width: 150px;">
                     <button onclick="window.open('https://www.justwatch.com/es/pelicula/la-sustancia-2024', '_blank')">Ver en JustWatch</button>
                     <button onclick="window.open('https://www.youtube.com/watch?v=bb10YAiF8nE', '_blank')">Ver Trailer</button>
                 </div>
+                <h6>Click para ver más...</h6>
+                <br>
+            </summary>
+            <div>
                 <h4>La sustancia: una incómoda mirada al espejo</h4>
                 <p><i>Director: Coralie Fargeat</i></p>
                 <p><b>Sinopsis</b></p>
@@ -125,6 +186,7 @@
                     Elisabeth Sparkle se enfrenta a un golpe devastador el día de su cumpleaños cuando su jefe la despide. 
                     En medio de su angustia, un laboratorio le ofrece una sustancia que promete transformarla en una versión mejorada de sí misma.
                 </p>
+                <br>
                 <h4>Reseña de nuestros cinéfilos.</h4>
                 <div>
                     <img src="assets/usuario_comentarios.png" alt="Foto Reseñador" style="height: 50px; width: 50px;">
@@ -150,9 +212,31 @@
                         como un título de culto, mezclando provocación intelectual con un horror visceral difícil de olvidar.
                     </p>
                 </div>
+                <section class="opinion-section">
+                    <h2>Comparte tu opinión sobre esta película</h2>
+                    <form class="form-opinion">
+                        <label for="nombre">Tu nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                        <label for="rating">Puntuación:</label>
+                        <select id="rating" name="rating">
+                            <option value="5">⭐️⭐️⭐️⭐️⭐️ - Excelente</option>
+                            <option value="4">⭐️⭐️⭐️⭐️ - Muy bueno</option>
+                            <option value="3">⭐️⭐️⭐️ - Regular</option>
+                            <option value="2">⭐️⭐️ - Malo</option>
+                            <option value="1">⭐️ - Muy malo</option>
+                        </select>
+                        <label for="comentario">Comentario:</label>
+                        <textarea id="comentario" name="comentario" rows="4" required></textarea>
+                        <button type="submit">Enviar opinión</button>
+                    </form>
+                </section>
+                <div class="comentarios-container">
+                    <h3>Opiniones de usuarios:</h3>
+                    <ul class="lista-comentarios"></ul>
+                </div>
             </div>
-        </article>
-    </div>
+        </details>
+    </main>
     <footer>
         <img src="assets/Logo-UTPL.jpg" style="height: 100px; width: 100px;" alt="LogoUTPL">
         <p>Realizado por Cristopher Jaramillo</p>

@@ -2,6 +2,9 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/js/scripts.js"></script>
     <title>Libros</title>
 </head>
 <body>
@@ -13,18 +16,22 @@
         <a href="noticias.html">Noticias</a>
         <a href="contacto.html">Contacto</a>
     </nav>
-    <div>
+    <main class="container">
         <h1>Libros</h1>
         <h2>Demos un vistazo a los libros reseñados por nuestros expertos.</h2>
-        <article>
-            <h3>Te receto un gato</h3>
-            <div>
+        <details>
+            <summary>
+                <h3>Te receto un gato</h3>
                 <div>
                     <img src="assets/img/portada_te-receto-un-gato_syou-ishida_202412051105.webp" alt="Te receto un gato" style="height: 200px; width: 150px;">
                     <button onclick="window.open('https://a.co/d/8mPPFNN', '_blank')">Comprar en Amazon</button>
                     <button onclick="window.open('https://www.planetadelibros.com/libro-te-receto-un-gato/414204', '_blank')">Ver en Planeta de Libros</button>
                     <button onclick="window.open('https://www.youtube.com/watch?v=nEejgbuiPto', '_blank')">Ver Reseña en Youtube</button>
                 </div>
+                <h6>Click para ver más...</h6>
+                <br>
+            </summary>
+            <div>
                 <h4>El bestseller japonés que ha engatusado a lectores de todo el mundo</h4>
                 <p><i>Autor: Syou Ishida</i></p>
                 <p><b>Sinopsis</b></p>
@@ -46,6 +53,7 @@
                     compañeros felinos una inesperada guía, demostrando que, a veces, el 
                     amor y la compañía de un gato pueden ser el primer paso hacia la sanación.
                 </p>
+                <br>
                 <h4>Reseña de nuestros expertos.</h4>
                 <div>
                     <img src="assets/usuario_comentarios.png" alt="Foto Reseñador" style="height: 50px; width: 50px;">
@@ -80,17 +88,43 @@
                         agradables y que se leen con facilidad. 
                     </p>
                 </div>
+                <section class="opinion-section">
+                    <h2>Comparte tu opinión sobre este libro</h2>
+                    <form class="form-opinion">
+                        <label for="nombre">Tu nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                        <label for="rating">Puntuación:</label>
+                        <select id="rating" name="rating">
+                            <option value="5">⭐️⭐️⭐️⭐️⭐️ - Excelente</option>
+                            <option value="4">⭐️⭐️⭐️⭐️ - Muy bueno</option>
+                            <option value="3">⭐️⭐️⭐️ - Regular</option>
+                            <option value="2">⭐️⭐️ - Malo</option>
+                            <option value="1">⭐️ - Muy malo</option>
+                        </select>
+                        <label for="comentario">Comentario:</label>
+                        <textarea id="comentario" name="comentario" rows="4" required></textarea>
+                        <button type="submit">Enviar opinión</button>
+                    </form>
+                </section>
+                <div class="comentarios-container">
+                    <h3>Opiniones de usuarios:</h3>
+                    <ul class="lista-comentarios"></ul>
+                </div>
             </div>
-        </article>
-        <article>
-            <h3>El asesinato de Aristóteles</h3>
-            <div>
+        </details>
+        <details>
+            <summary>
+                <h3>El asesinato de Aristóteles</h3>
                 <div>
                     <img src="assets/img/portada_el-asesinato-de-aristoteles_marcos-chicot_202504021621.webp" alt="El asesinato de Aristóteles" style="height: 200px; width: 150px;">
                     <button onclick="window.open('https://a.co/d/dKUxmSu', '_blank')">Comprar en Amazon</button>
                     <button onclick="window.open('https://www.planetadelibros.com/libro-el-asesinato-de-aristoteles/416362', '_blank')">Ver en Planeta de Libros</button>
                     <button onclick="window.open('https://www.youtube.com/watch?v=VwYCZvOfiWc', '_blank')">Ver Reseña en Youtube</button>
                 </div>
+                <h6>Click para ver más...</h6>
+                <br>
+            </summary>
+            <div>
                 <h4>Cuando los dioses callan y los reyes mueren, la historia la escriben los que sobreviven. Un thriller lleno de conspiración, pasión y peligro.</h4>
                 <p><i>Autor: Marcos Chicot</i></p>
                 <p><b>Sinopsis</b></p>
@@ -108,6 +142,7 @@
                     se ven arrastrados por los peligros que se ciernen sobre Aristóteles. Mientras luchan por 
                     sobrevivir, la sombra de un antiguo secreto alterará sus destinos en un mundo que comienza a desmoronarse.
                 </p>
+                <br>
                 <h4>Reseña de nuestros expertos.</h4>
                 <div>
                     <img src="assets/usuario_comentarios.png" alt="Foto Reseñador" style="height: 50px; width: 50px;">
@@ -130,17 +165,43 @@
                         eterna batalla entre ética y poder.
                     </p>
                 </div>
+                <section class="opinion-section">
+                    <h2>Comparte tu opinión sobre este libro</h2>
+                    <form class="form-opinion">
+                        <label for="nombre">Tu nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                        <label for="rating">Puntuación:</label>
+                        <select id="rating" name="rating">
+                            <option value="5">⭐️⭐️⭐️⭐️⭐️ - Excelente</option>
+                            <option value="4">⭐️⭐️⭐️⭐️ - Muy bueno</option>
+                            <option value="3">⭐️⭐️⭐️ - Regular</option>
+                            <option value="2">⭐️⭐️ - Malo</option>
+                            <option value="1">⭐️ - Muy malo</option>
+                        </select>
+                        <label for="comentario">Comentario:</label>
+                        <textarea id="comentario" name="comentario" rows="4" required></textarea>
+                        <button type="submit">Enviar opinión</button>
+                    </form>
+                </section>
+                <div class="comentarios-container">
+                    <h3>Opiniones de usuarios:</h3>
+                    <ul class="lista-comentarios"></ul>
+                </div>
             </div>
-        </article>
-        <article>
-            <h3>Hábitos Atómicos</h3>
-            <div>
+        </details>
+        <details>
+            <summary>
+                <h3>Hábitos Atómicos</h3>
                 <div>
                     <img src="assets/img/portada_habitos-atomicos_james-clear_202002111200.webp" alt="Hábitos Atómicos" style="height: 200px; width: 150px;">
                     <button onclick="window.open('https://amzn.eu/d/ciRhLZ8', '_blank')">Comprar en Amazon</button>
                     <button onclick="window.open('https://www.planetadelibros.com/libro-habitos-atomicos/310441', '_blank')">Ver en Planeta de Libros</button>
                     <button onclick="window.open('https://www.youtube.com/watch?v=Qjbp4CVHh4M', '_blank')">Ver Reseña en Youtube</button>
                 </div>
+                <h6>Click para ver más...</h6>
+                <br>
+            </summary>
+            <div>
                 <h4>Cambios pequeños, resultados extraordinarios</h4>
                 <p><i>Autor: James Clear</i></p>
                 <p><b>Sinopsis</b></p>
@@ -156,6 +217,7 @@
                     minúsculos pueden crecer hasta llegar a cambiar nuestra carrera profesional, nuestras relaciones 
                     y todos los aspectos de nuestra vida.
                 </p>
+                <br>
                 <h4>Reseña de nuestros expertos.</h4>
                 <div>
                     <img src="assets/usuario_comentarios.png" alt="Foto Reseñador" style="height: 50px; width: 50px;">
@@ -179,9 +241,31 @@
                         duraderos, transformando no solo lo que haces, sino también cómo te percibes a ti mismo.
                     </p>
                 </div>
+                <section class="opinion-section">
+                    <h2>Comparte tu opinión sobre este libro</h2>
+                    <form class="form-opinion">
+                        <label for="nombre">Tu nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                        <label for="rating">Puntuación:</label>
+                        <select id="rating" name="rating">
+                            <option value="5">⭐️⭐️⭐️⭐️⭐️ - Excelente</option>
+                            <option value="4">⭐️⭐️⭐️⭐️ - Muy bueno</option>
+                            <option value="3">⭐️⭐️⭐️ - Regular</option>
+                            <option value="2">⭐️⭐️ - Malo</option>
+                            <option value="1">⭐️ - Muy malo</option>
+                        </select>
+                        <label for="comentario">Comentario:</label>
+                        <textarea id="comentario" name="comentario" rows="4" required></textarea>
+                        <button type="submit">Enviar opinión</button>
+                    </form>
+                </section>
+                <div class="comentarios-container">
+                    <h3>Opiniones de usuarios:</h3>
+                    <ul class="lista-comentarios"></ul>
+                </div>
             </div>
-        </article>
-    </div>
+        </details>
+    <main>
     <footer>
         <img src="assets/Logo-UTPL.jpg" style="height: 100px; width: 100px;" alt="LogoUTPL">
         <p>Realizado por Cristopher Jaramillo</p>
